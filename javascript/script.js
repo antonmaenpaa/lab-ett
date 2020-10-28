@@ -2,18 +2,14 @@
 
             let text = document.getElementById('text');
             let button = document.getElementById('button-box');
-            let images = document.getElementById('img');
    
-
             function advanceTo(s) {
                 changeText(s.text)
                 changeButtons(s.button)
-
             }
 
             function changeText(newText) {
-                text.innerHTML = newText;
-                
+                text.innerHTML = newText;           
             }
 
             function changeButtons(newButtons) {
