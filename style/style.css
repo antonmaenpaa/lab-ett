@@ -16,6 +16,12 @@ body {
     flex-direction: column;
 }
 
+#text {
+    width: 60rem;
+}
+
+
+
 .button-div {
     margin: 2rem 0;
     display: flex;
