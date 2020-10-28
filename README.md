@@ -1,4 +1,4 @@
-# lab-ett
+# Laboration 1
 ## RES ÄVENTYR (TEXT BASED)
 
 Jag saknar att resa i dessa tider, så gjorde ett simpelt resäventyr.
