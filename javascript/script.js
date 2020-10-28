@@ -1,30 +1,8 @@
 
-            // let text = document.getElementById('text');
-            // let buttonOne = document.getElementById('button-one');
-            // let buttonTwo = document.getElementById('button-two');
-          
-
-            // function goItaly() {
-            //     console.log('jeu')
-            //     advanceTo(scenario.one);
-            //     document.getElementById('buttonOne').onclick = scenario.button;
-        
-            // }
-            // function goSpain() {
-            //     advanceTo(scenario.three);
-            // }
-
-
-
-            // function advanceTo(s) {
-            //     changeText(s.text)
-            //     changeButtonOne(s.button)
-            //     changeButtonTwo(s.secondButton)
-            
-            // }
 
             let text = document.getElementById('text');
             let button = document.getElementById('button-box');
+            let images = document.getElementById('img');
    
 
             function advanceTo(s) {
@@ -32,7 +10,6 @@
                 changeButtons(s.button)
 
             }
-
 
             function changeText(newText) {
                 text.innerHTML = newText;
@@ -46,20 +23,6 @@
                   }
                 }
 
-            // function changeButtonOne(oneB) {
-            //     buttonOne.innerHTML = '';
-            //     for (var i = 0; i < twoB.length; i++) {
-            //         buttonOne.innerHTML += "<button onclick="+oneB[i][1]+">" + oneB[i][0] + "</button>";
-            //       };
- 
-            //     };
-            // function changeButtonTwo(twoB) {
-            //     buttonTwo.innerHTML = '';
-            //     for (var i = 0; i < twoB.length; i++) {
-            //         buttonTwo.innerHTML += "<button onclick="+twoB[i][1]+">" + twoB[i][0] + "</button>";
-            //       };
-            //     };
-                
             
             let scenario = {
                 one: {
@@ -72,7 +35,7 @@
                 two: {
                     text: 'Vilket bra val, Italien har många mysiga byar att utforska. Du har lite tid innan planet lyfter, vill du gå och ta en öl i väntan?',
 
-                    button: [["Ja", "advanceTo(scenario.four)"], ["Nej", "advanceTo(scenario.five"]],
+                    button: [["Ja", "advanceTo(scenario.four)"], ["Nej", "advanceTo(scenario.nine)"]],
                 },
 
                 // Spanien
@@ -80,32 +43,65 @@
                     
                     text: 'Hola amigo! Spanien är ett utmärkt val. Fullt med salsaklubbar som du längtar att få besöka! Vill du strosa runt tax free lite innan planet lyfter?',
 
-                    button: [["Ja", "advanceTo(scenario.one)"], ["Nej", "advanceTo(scenario.five)"]],
+                    button: [["Ja", "advanceTo(scenario.five)"], ["Nej", "advanceTo(scenario.six)"]],
                 },
 
                 // Italien 
                 four: {
                     text: 'Du hade missberäknat tiden och satt lite väl länge och njöt av din öl. Tyvärr missade du planet och resan slutar här.....😒 ',
 
-                    button: [["Avsluta", "advanceTo(scenario.one)"]],
+                    button: [["Avsluta", "advanceTo(scenario.one)"]]
                 },
 
                 // Spanien
                 five: {
-                    text: 'Du hade missberäknat tiden och satt lite väl länge och njöt av din öl. Tyvärr missade du planet och resan slutar här.....😒 ',
+                    text: 'Du hittar massor med gott som du skulle vilja köpa men du nöjer dig med en bok du tänkte läsa på planet. ',
 
-                    button: [["Avsluta", "advanceTo(scenario.one)"]],
+                    button: [["Fortsätt", "advanceTo(scenario.seven)"]],
                 },
+
+                //spanien
                 six: {
-                    text: 'Du hade missberäknat tiden och satt lite väl länge och njöt av din öl. Tyvärr missade du planet och resan slutar här.....😒 ',
+                    text: 'Du sätter dig vid gaten och väntar på att planet ska bli redo för avfärd. ',
 
-                    button: [["Avsluta", "advanceTo(scenario.one)"]],
+                    button: [["Fortsätt", "advanceTo(scenario.seven)"]],
                 },
+                
+                // Spanien
                 seven: {
-                    text: 'Du hade missberäknat tiden och satt lite väl länge och njöt av din öl. Tyvärr missade du planet och resan slutar här.....😒 ',
+                    text: 'Nu är planet redo och du ställer dig i kön för att stiga på. Nu är det sista chansen att ändra dig och åka hem igen. Vill du verkligen stiga på planet och flyga till Spanien? ',
 
-                    button: [["Avsluta", "advanceTo(scenario.one)"]],
+                    button: [["Ja, självklart!", "advanceTo(scenario.eight)"], ["Nej, ångrat mig.", "advanceTo(scenario.one)"]],
                 },
+
+                // Spanien
+                eight: {
+                    text: 'Pjuh, tur att du inte fått kalla fötter, Spanien är verkligen superfint. Nu har planet landat och äventyret på Spaniens salsaklubbar kan börja! ',
+
+                    button: [["Börja om", "advanceTo(scenario.one)"]],
+                },
+
+                // Italien
+                nine: {
+                    text: 'Planet var precis i tid och har nu lyft från svensk mark och din resa mot Italien har börjat. På planet så erbjuder de dig lunch, vill du äta något? ',
+
+                    button: [["Ja", "advanceTo(scenario.ten)"], ["Nej", "advanceTo(scenario.eleven)"]],
+                },
+
+                // Italien
+                ten: {
+                    text: 'oj så gott det var med lite mat i magen. Timmar flyger iväg (bokstavligen) och nu har du landat i Italien. Välkommen och hoppas du får en fin resa. ',
+
+                    button: [["Börja om", "advanceTo(scenario.one)"]],
+                },
+
+                // Italien
+                eleven: {
+                    text: 'Vilken tur att du inte tog någon mat för det har varit lite turbulens under flygresan och du blir så lätt illamående. Nu är du äntligen framme i Italien. Hoppas du får en fin vistelse här!  ',
+
+                    button: [["Börja om", "advanceTo(scenario.one)"]],
+                },
+
             };
 
             advanceTo(scenario.one);
