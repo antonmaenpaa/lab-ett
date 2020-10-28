@@ -7,4 +7,4 @@ I detta enkla interaktiva resäventyr tar användaren sig genom äventyret med h
 
 demo länk: [GITHub home page](https://www.github.com)
 
-länk till spelet[HÄR](https://antonmaenpaa.github.io/lab-ett)
+länk till spelet [HÄR](https://antonmaenpaa.github.io/lab-ett)
