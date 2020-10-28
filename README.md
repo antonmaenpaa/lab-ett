@@ -3,6 +3,6 @@
 
 Jag saknar att resa i dessa tider, så gjorde ett simpelt resäventyr.
 
-I detta änkla resäventyr tar användern sig genom med några beslut, med hjälp av knappar.
+I detta enkla interaktiva resäventyr tar användaren sig genom äventyret med hjälp av knappar.
 
 demo länk: [GITHub home page](https://www.github.com)
