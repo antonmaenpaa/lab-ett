@@ -3,15 +3,18 @@
             let text = document.getElementById('text');
             let button = document.getElementById('button-box');
    
+            /** Moves game forward */
             function advanceTo(s) {
                 changeText(s.text)
                 changeButtons(s.button)
             }
 
+            /** Change text on new scenarios */
             function changeText(newText) {
                 text.innerHTML = newText;           
             }
 
+            /** Change buttons on new scenario */
             function changeButtons(newButtons) {
                 button.innerHTML = '';
                 for (var i = 0; i < newButtons.length; i++) {
@@ -19,7 +22,9 @@
                   }
                 }
 
-            
+            /**
+             * @type {object} object with all the scenarios
+             */
             let scenario = {
                 one: {
                     text: 'Du har varit sugen ett tag nu på att fara och resa. <br>Du vill komma iväg så snabbt som möjligt och då finns det två alternativ. Planen går till Italien och Spanien. <br>Vilket land är du mer sugen på? ',
@@ -100,4 +105,5 @@
 
             };
 
+            /** Starts the game, moves to scenario one*/
             advanceTo(scenario.one);
