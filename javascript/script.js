@@ -105,5 +105,5 @@
 
             };
 
-            /** Starts the game, moves to scenario one*/
+            /* Starts the game, moves to scenario one*/
             advanceTo(scenario.one);
